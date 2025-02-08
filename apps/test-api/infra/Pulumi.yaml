@@ -1,0 +1,4 @@
+name: test-api
+main: "index.ts"
+runtime:
+  name: nodejs

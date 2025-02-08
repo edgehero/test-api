@@ -1,0 +1,77 @@
+{
+  "name": "test-api",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "sourceRoot": "apps/test-api/src",
+  "targets": {
+    "build": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "node scripts/build.js",
+        "cwd": "apps/test-api"
+      }
+    },
+    "preview": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "cd infra && pulumi preview",
+        "cwd": "apps/test-api"
+      },
+      "cache": false,
+      "dependsOn": [
+        "build",
+        {
+          "projects": "self",
+          "target": "select-stack",
+          "params": "forward"
+        }
+      ]
+    },
+    "select-stack": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "cd infra && pulumi stack select --create",
+        "cwd": "apps/test-api"
+      }
+    },
+    "deploy": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "cd infra && pulumi up --non-interactive --yes",
+        "cwd": "apps/test-api"
+      },
+      "cache": false,
+      "dependsOn": [
+        "build",
+        {
+          "projects": "self",
+          "target": "select-stack",
+          "params": "forward"
+        }
+      ]
+    },
+    "destroy": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "cd infra && pulumi destroy --yes",
+        "cwd": "apps/test-api"
+      }
+    },
+    "refresh": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "cd infra && pulumi refresh",
+        "cwd": "apps/test-api"
+      },
+      "cache": false,
+      "dependsOn": [
+        "build",
+        {
+          "projects": "self",
+          "target": "select-stack",
+          "params": "forward"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,118 @@
+{
+    "info": {
+        "_postman_id": "680019d1-6a6a-4754-8350-268b2abb84b7",
+        "name": "test",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+        "description": ""
+    },
+    "item": [
+        {
+            "name": "https://ku28a2d8m9.execute-api.eu-west-1.amazonaws.com/dev/stats",
+            "request": {
+                "method": "GET",
+                "url": {
+                    "raw": "https://ku28a2d8m9.execute-api.eu-west-1.amazonaws.com/dev/stats",
+                    "path": [
+                        "dev",
+                        "stats"
+                    ],
+                    "protocol": "https",
+                    "host": [
+                        "ku28a2d8m9",
+                        "execute-api",
+                        "eu-west-1",
+                        "amazonaws",
+                        "com"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "https://ku28a2d8m9.execute-api.eu-west-1.amazonaws.com/dev/me",
+            "request": {
+                "method": "GET",
+                "url": {
+                    "raw": "https://ku28a2d8m9.execute-api.eu-west-1.amazonaws.com/dev/me",
+                    "path": [
+                        "dev",
+                        "me"
+                    ],
+                    "protocol": "https",
+                    "host": [
+                        "ku28a2d8m9",
+                        "execute-api",
+                        "eu-west-1",
+                        "amazonaws",
+                        "com"
+                    ]
+                },
+                "header": [
+                    {
+                        "key": "Authorization",
+                        "value": "Bearer eyJzdWIiOiJkdW1teS11c2VyLWlkIiwiZW1haWwiOiJ1c2VyQGV4YW1wbGUuY29tIiwiZXhwIjoxNzM5MDMxMjAxfQ=="
+                    }
+                ]
+            }
+        },
+        {
+            "name": "https://ku28a2d8m9.execute-api.eu-west-1.amazonaws.com/dev/login",
+            "request": {
+                "method": "POST",
+                "url": {
+                    "raw": "https://ku28a2d8m9.execute-api.eu-west-1.amazonaws.com/dev/login",
+                    "path": [
+                        "dev",
+                        "login"
+                    ],
+                    "protocol": "https",
+                    "host": [
+                        "ku28a2d8m9",
+                        "execute-api",
+                        "eu-west-1",
+                        "amazonaws",
+                        "com"
+                    ]
+                },
+                "body": {
+                    "mode": "raw",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    },
+                    "raw": "{\r\n  \"email\": \"user@example.com\",\r\n  \"password\": \"securepass\"\r\n}"
+                }
+            }
+        },
+        {
+            "name": "https://ku28a2d8m9.execute-api.eu-west-1.amazonaws.com/dev",
+            "request": {
+                "method": "POST",
+                "url": {
+                    "raw": "https://ku28a2d8m9.execute-api.eu-west-1.amazonaws.com/dev/register",
+                    "path": [
+                        "dev",
+                        "register"
+                    ],
+                    "protocol": "https",
+                    "host": [
+                        "ku28a2d8m9",
+                        "execute-api",
+                        "eu-west-1",
+                        "amazonaws",
+                        "com"
+                    ]
+                },
+                "body": {
+                    "mode": "raw",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    },
+                    "raw": "{\r\n  \"email\": \"user@example.com\",\r\n  \"password\": \"securepass\",\r\n  \"firstName\": \"John\",\r\n  \"lastName\": \"Doe\"\r\n}"
+                }
+            }
+        }
+    ]
+}

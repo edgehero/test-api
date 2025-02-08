@@ -1,0 +1,34 @@
+{
+  "name": "test-api",
+  "version": "1.0.0",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Rob Boerman",
+  "license": "ISC",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "libs/*"
+  ],
+  "devDependencies": {
+    "@nx/devkit": "19.6.1",
+    "@nx/plugin": "^19.6.1",
+    "@pulumi/pulumi": "^3.137.0",
+    "@types/node": "^22.4.2",
+    "esbuild": "^0.25.0",
+    "fs": "^0.0.1-security",
+    "nx": "19.6.1",
+    "path": "^0.12.7",
+    "typescript": "^5.5.4"
+  },
+  "dependencies": {
+    "@pulumi/aws": "^6.68.0",
+    "aws-lambda": "^1.0.7",
+    "aws-sdk": "^2.1692.0",
+    "uuid": "^11.0.2"
+  },
+  "engines": {
+    "node": "22.9.0"
+  }
+}

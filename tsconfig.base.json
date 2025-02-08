@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+      "target": "es6",
+      "module": "commonjs",
+      "outDir": "dist",
+      "rootDir": "apps",
+      "strict": true,
+      "noImplicitAny": false,
+      "strictNullChecks": false,
+      "esModuleInterop": true,
+      "moduleResolution": "node",
+      "resolveJsonModule": true,
+      "forceConsistentCasingInFileNames": true,
+  },
+  "include": [
+      "apps/**/*.ts"
+  ],
+  "exclude": [
+      "node_modules",
+      "libs",
+      "ci"
+  ]
+}
